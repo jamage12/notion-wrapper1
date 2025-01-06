@@ -14,7 +14,6 @@
       background-color: #f5f5f5;
     }
     iframe {
-      display: none; /* Initially hide the iframe */
       border: none;
       width: 100%;
       height: 100vh;
@@ -28,17 +27,19 @@
 </head>
 <body>
   <script>
-    const password = "moonDOM25"; // Set your password here
+    const password = "moonDOM25"; // Replace with your desired password
     const userInput = prompt("Enter the password:");
 
     if (userInput === password) {
-      // If password is correct, display the iframe
+      // If password is correct, show the Notion page
       document.body.innerHTML = `
-        <iframe src="https//:alkaline-bobolink-8d3.notion.site/Mosaic-Moon-Deutsches-Optisches-Museum-x-Studio-Jamal-Ageli-15fd63de14d080a796f5d840be2dc2f5"></iframe>
+        <iframe src="https://alkaline-bobolink-8d3.notion.site/Mosaic-Moon-Deutsches-Optisches-Museum-x-Studio-Jamal-Ageli-15fd63de14d080a796f5d840be2dc2f5" allowfullscreen></iframe>
       `;
     } else {
-      // If password is incorrect, display "Access Denied"
-      document.body.innerHTML = "<div id='access-denied'>Access Denied</div>";
+      // If password is incorrect, show an error message
+      document.body.innerHTML = `
+        <div id="access-denied">Access Denied. Refresh the page and try again.</div>
+      `;
     }
   </script>
 </body>
